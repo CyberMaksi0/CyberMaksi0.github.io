@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    border: 10px solid #222;
+    background-color: #d6cece;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+header {
+    background-image: radial-gradient(white, grey, #222);
+    color: white;
+}
+li {
+    font-size: 150%;
+}
+#countdown {
+    font-size: 130%;
+}
+.countdown-panel {
+    margin: 10% auto;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+}
+.ticket-card {
+    background-color: #333;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    height: 250px;
+}
+.ticket-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+}
+.ticket-card h5,
+.ticket-card p {
+    color: #fff;
+}
+.ticket-card img {
+    border-radius: 15px;
+}
+.buy-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+.buy-button:hover {
+    background-color: #fff;
+    color: #000;
+}
+.sponsor-logo {
+    max-width: 40%;
+    height: 40%;
+    margin: 20px;
+}
+.hotel-info {
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+.hotel-image {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+.hotel-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.hotel-description {
+    margin-top: 10px;
+}
+.hotel-price {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.hotel-form {
+    padding: 20px;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.contact-section {
+    background-color: #222;
+    padding: 40px 0;
+}
+.contact-details {
+    list-style: none;
+    padding: 0;
+}
+.contact-details li {
+    margin-bottom: 15px;
+}
+.contact-details a {
+    margin-bottom: 15px;
+    color: black;
+}
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+.footer-links li {
+    margin-bottom: 5px;
+}
+.footer-links a {
+    color: black;
+}
