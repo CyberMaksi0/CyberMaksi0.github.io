@@ -29,7 +29,7 @@
             </div>
         </div>
     </header>
-    <nav class="navbar-inverse">
+    <nav class="navbar-inverse navbar-fixed" id="navbar">
         <div class="container-fluid">
           <ul class="nav navbar-nav">
             <li><a href="#home">Menu</a></li>
@@ -228,7 +228,7 @@
                     </h4>
                 </div>
                 <div id="collapse4" class="panel-collapse collapse">
-                    <div class="panel-body" style="font-size:30px;">&#128514;&#128514;&#128514;</div>
+                    <div class="panel-body" style="font-size: 30px;">&#128514;&#128514;&#128514;</div>
                 </div>
             </div>
             <div class="panel panel-default">
@@ -387,8 +387,42 @@
         }
         document.getElementById('reservation-form').addEventListener('submit', function (e) {
             e.preventDefault();
-            alert('Wysłano zgłoszenie!');
+            const iloscDob = parseInt(document.getElementById('iloscDob').value, 10);
+            const iloscOsob = parseInt(document.getElementById('iloscOsob').value, 10);
+
+            if (iloscDob <= 0 || iloscOsob <= 0) {
+                alert('Wprowadź poprawną ilość dni i osób (większą niż zero).');
+            } else {
+                alert('Wysłano zgłoszenie!');
+            }
         });
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            const navbar = document.querySelector('#navbar');
+            const headerHeight = header.offsetHeight;
+            const scrollTop = window.scrollY;
+
+            if (scrollTop > headerHeight) {
+                navbar.classList.add('navbar-fixed');
+            } else {
+                navbar.classList.remove('navbar-fixed');
+            }
+        });
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
     </script>
 </body>
 </html>
